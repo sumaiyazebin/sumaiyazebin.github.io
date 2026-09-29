@@ -1,0 +1,24 @@
+/* Sticky header and section headings */
+
+.bar {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 10;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+.mark { font: 700 .95rem/1 var(--display); font-stretch: 125%; letter-spacing: .04em; text-decoration: none; text-transform: uppercase; }
+.bar nav { display: flex; gap: clamp(12px, 3vw, 28px); flex-wrap: wrap; }
+.bar nav a { font: 500 .75rem/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; text-decoration: none; color: var(--ink-soft); }
+.bar nav a:hover { color: var(--brick); }
+
+.section { padding-block: clamp(48px, 8vw, 96px); }
+.section + .section { border-top: 1px solid var(--line); }
+.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: clamp(28px, 4vw, 48px); }
+.section-head h2 { font-size: clamp(1.6rem, 3.4vw, 2.4rem); font-weight: 700; font-stretch: 112%; text-transform: uppercase; letter-spacing: .01em; }
+
+@media (max-width: 560px) {
+  .bar nav a.opt { display: none; }
+}

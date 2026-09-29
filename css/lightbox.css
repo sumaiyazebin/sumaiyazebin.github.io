@@ -1,0 +1,7 @@
+/* Full-size image viewer */
+
+dialog.viewer { border: 0; padding: 0; max-width: min(96vw, 1600px); max-height: 94vh; background: transparent; color: #eef0ec; }
+dialog.viewer::backdrop { background: rgba(10, 13, 11, .9); }
+dialog.viewer img { max-width: 100%; max-height: calc(94vh - 56px); margin-inline: auto; }
+dialog.viewer .cap { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-top: 12px; font: 400 .78rem/1.4 var(--mono); }
+dialog.viewer button { font: 500 .75rem/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; background: none; color: inherit; border: 1px solid rgba(238, 240, 236, .4); padding: 8px 12px; cursor: pointer; }
